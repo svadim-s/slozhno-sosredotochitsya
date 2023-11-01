@@ -3,12 +3,13 @@
   --accent-color: #FF8DCB;
   --title-color: #FFC2E6;
   --text-color: #353430;
+  --decor-color: #353430;
   --title-content-color: #353430;
   --title-article-color: #353430;
   --button-color: #353430;
   --decorate-color: #353430;
   --hover-btn-color: rgba(50, 49, 45, 0.40);
-  --bg-color: #FFF1F7;
+  --shadow-1024: #ff0070;
 }
 
 .theme_light .header__decorated-element {

@@ -3,15 +3,16 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  font-family: var(--font-fm, sans-serif);
+  font-family: var(--font-fm, monospace);
   font-size: var(--font-size, 18px);
   padding: 10px;
 }
 
 .header {
   display: grid;
-  grid-templates-row: 1fr min-content 1fr;
   justify-items: flex-end;
+  grid-template-rows: 1fr min-content 1fr;
+  min-height: 100vh;
 }
 
 .decorated-zone {
@@ -113,12 +114,16 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 95.70px;
-  margin-block-start: 70px;
-  margin-block-end: 53px;
+  margin-block-start: 56px;
+  margin-block-end: 56px;
 }
 
 .text-shadow {
   text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.link-shadow {
+  text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 .header__text-wrapper {
@@ -133,13 +138,12 @@
 
 .title_decor {
   background-color: var(--accent-color);
-  color: var(--color);
+  color: var(--decor-color);
 }
 
 .main {
   margin-block-start: 51px;
   margin-block-end: 40px;
-  background-color: var(--bg-color, #000028);
 }
 
 .section {
@@ -214,10 +218,9 @@ a:focus-visible {
 }
 
 .footer {
-  min-height: 647px;
+  min-height: 108vh;
   display: grid;
   justify-items: center;
-  background-color: var(--bg-color, #000028);
 }
 
 .footer__content {
@@ -246,8 +249,8 @@ a:focus-visible {
   .title {
     display: flex;
     justify-self: start;
-    margin-block-start: 180px;
-    margin-block-end: 160px;
+    margin-block-start: 163px;
+    margin-block-end: 163px;
     position: relative;
     left: -20px;
   }
@@ -348,7 +351,7 @@ a:focus-visible {
   }
 
   .footer {
-    min-height: 980px;
+    min-height: 164vh;
   }
 }
 
@@ -356,6 +359,10 @@ a:focus-visible {
   .page {
     padding: 20px;
     font-size: var(--font-size, 18px);
+  }
+
+  .decorated-zone::after {
+    bottom: 72px;
   }
 
   .header__theme-menu {
@@ -372,19 +379,23 @@ a:focus-visible {
   }
 
   .title {
-    margin-block-start: 295px;
+    margin-block-start: 60px;
     margin-block-end: 130px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
+  .text-shadow {
+    text-shadow: 4px 4px 0px var(--shadow-1024);
+  }
+
   .header__text-wrapper  {
-    grid-column: 1 / 3;
     max-width: 491px;
-    margin-block-end: 114px;
+    height: fit-content;
+    margin-block-end: 0;
   }
 
   .main {
-    margin-block-start: 80px;
+    margin-block-start: 8px;
   }
 
   .section__title {
@@ -405,7 +416,7 @@ a:focus-visible {
   }
 
   .footer {
-    min-height: 726px;
+    min-height: 100vh;
   }
 
   .footer__content {
@@ -417,5 +428,6 @@ a:focus-visible {
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-block-end: 70px;
   }
 }
